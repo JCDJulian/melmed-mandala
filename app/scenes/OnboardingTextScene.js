@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-
 import Swiper from 'react-native-swiper';
 
 export default class OnboardingTextScene extends Component {
@@ -19,6 +18,11 @@ export default class OnboardingTextScene extends Component {
         </View>
         <View style={styles.slide3}>
           <Text style={styles.text}>And simple</Text>
+          <Button
+            onPress={Actions.onboardingQuiz}
+            title="Get Started"
+            accessibilityLabel="Get started with onboarding assessment."
+          />
         </View>
       </Swiper>
     )

@@ -18,7 +18,7 @@ const TabIcon = ({ selected, title }) => {
 const scenes = Actions.create(
   <Scene key="root">
     <Scene key="onboardingText" component={OnboardingTextScene} title="Onboarding Text" />
-    <Scene key="onboardingQuiz" component={OnboardingQuizScene} title="Onboarding Quix" />
+    <Scene key="onboardingQuiz" component={OnboardingQuizScene} title="Onboarding Quiz" />
     <Scene key="mandala" component={MandalaScene} title="Mandala" />
 
     {/* Mandala Detail Page */}
