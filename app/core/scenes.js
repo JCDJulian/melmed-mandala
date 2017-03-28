@@ -17,7 +17,6 @@ const TabIcon = ({ selected, title }) => {
 
 const scenes = Actions.create(
   <Scene key="root">
-    <Scene key="launch" component={LaunchScene} title="Launch" />
     <Scene key="onboardingText" component={OnboardingTextScene} title="Onboarding Text" />
     <Scene key="onboardingQuiz" component={OnboardingQuizScene} title="Onboarding Quix" />
     <Scene key="mandala" component={MandalaScene} title="Mandala" />
@@ -35,6 +34,9 @@ const scenes = Actions.create(
         <Scene key="editMetric" component={EditMetricScene} title="Edit Metric" />
       </Scene>
     </Scene>
+
+    {/* Test scene. Can refactor into loading screen later. */}
+    <Scene key="launch" component={LaunchScene} title="Launch" />
 
   </Scene>
 );
