@@ -5,6 +5,7 @@ import Swiper from 'react-native-swiper';
 
 export default class OnboardingTextScene extends Component {
   render() {
+    const goToQuiz = () => Actions.onboardingQuiz({wedge: "Relationships"})
     return (
       <Swiper
         style={styles.wrapper}
@@ -19,7 +20,7 @@ export default class OnboardingTextScene extends Component {
         <View style={styles.slide3}>
           <Text style={styles.text}>And simple</Text>
           <Button
-            onPress={Actions.onboardingQuiz}
+            onPress={ goToQuiz }
             title="Get Started"
             accessibilityLabel="Get started with onboarding assessment."
           />

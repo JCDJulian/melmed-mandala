@@ -1,4 +1,5 @@
 import React from 'react';
+import { Text } from 'react-native';
 import { Actions, Scene } from 'react-native-router-flux';
 
 import LaunchScene from '../scenes/LaunchScene';

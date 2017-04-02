@@ -4,6 +4,7 @@ import { Actions } from 'react-native-router-flux'
 
 export default class OnboardingQuizScene extends Component {
   render() {
+    // const nextPage = () => Actions.onboardingQuiz({text: "bleh2"})
     return (
       <View style={styles.container}>
         <Text>Hello world</Text>
@@ -12,6 +13,7 @@ export default class OnboardingQuizScene extends Component {
           title="Submit Assessment"
           accessibilityLabel="Submit assessment and move to mandala."
         />
+        <Text>{this.props.wedge}</Text>
       </View>
     )
   }

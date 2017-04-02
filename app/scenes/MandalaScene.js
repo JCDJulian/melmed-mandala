@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, Text, StyleSheet, Button } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 
 export default class MandalaScene extends Component {
@@ -7,6 +7,11 @@ export default class MandalaScene extends Component {
     return (
       <View style={styles.container}>
         <Text>MandalaScene</Text>
+        <Button
+          onPress={Actions.tabbar}
+          title="Select wedge."
+          accessibilityLabel="Select wedge."
+        />
       </View>
     )
   }
