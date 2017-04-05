@@ -2,10 +2,11 @@ import React, { Component } from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import Swiper from 'react-native-swiper';
+import { WEDGES } from '../constants/Constants.js';
 
 export default class OnboardingTextScene extends Component {
   render() {
-    const goToQuiz = () => Actions.onboardingQuiz({wedge: "Relationships"})
+    const goToQuiz = () => Actions.onboardingQuiz({wedge: WEDGES[0]})
     return (
       <Swiper
         style={styles.wrapper}
