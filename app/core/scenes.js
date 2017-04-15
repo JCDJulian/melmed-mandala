@@ -5,6 +5,7 @@ import { Actions, Scene } from 'react-native-router-flux';
 import LaunchScene from '../scenes/LaunchScene';
 import OnboardingTextScene from '../scenes/OnboardingTextScene';
 import OnboardingQuizScene from '../scenes/OnboardingQuizScene';
+import RateWedgeScene from '../scenes/RateWedgeScene';
 import MandalaScene from '../scenes/MandalaScene';
 import RecommendationsScene from '../scenes/RecommendationsScene';
 import GraphScene from '../scenes/GraphScene';
@@ -18,8 +19,9 @@ const TabIcon = ({ selected, title }) => {
 
 const scenes = Actions.create(
   <Scene key="root">
-    <Scene key="onboardingText" component={OnboardingTextScene} title="Onboarding Text" />
-    <Scene key="onboardingQuiz" component={OnboardingQuizScene} title="Onboarding Quiz" />
+    <Scene key="onboardingText" component={OnboardingTextScene} />
+    <Scene key="onboardingQuiz" component={OnboardingQuizScene} />
+    <Scene key="rateWedge" component={RateWedgeScene} />
     <Scene key="mandala" component={MandalaScene} title="Mandala" />
 
     {/* Mandala Detail Page */}
