@@ -37,7 +37,7 @@ export default class RateWedgeScene extends Component {
   }
 
   render() {
-    const nextPage = getNextPage(this.props.wedge)
+    const nextPage = getNextPage(this.props.wedge, true)
 
     return (
       <View style={styles.container}>

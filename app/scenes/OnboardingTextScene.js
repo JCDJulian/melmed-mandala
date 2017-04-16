@@ -6,7 +6,10 @@ import { WEDGES } from '../constants/Constants.js';
 
 export default class OnboardingTextScene extends Component {
   render() {
-    const goToQuiz = () => Actions.onboardingQuiz({wedge: WEDGES[0]})
+    const goToQuiz = () => Actions.onboardingQuiz({
+      wedge: WEDGES[0],
+      title: WEDGES[0]
+    })
     return (
       <Swiper
         style={styles.wrapper}
