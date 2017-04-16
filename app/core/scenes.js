@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { Actions, Scene } from 'react-native-router-flux';
 
 import LaunchScene from '../scenes/LaunchScene';
@@ -12,36 +12,42 @@ import GraphScene from '../scenes/GraphScene';
 import EditMetricScene from '../scenes/EditMetricScene';
 
 const TabIcon = ({ selected, title }) => {
-  return (
-    <Text style={{color: selected ? 'red' :'black'}}>{title}</Text>
-  );
+return (
+  <Text style={{color: selected ? 'red' :'black'}}>{title}</Text>
+);
 }
 
+const style = StyleSheet.create({
+    padForNavBar: {
+      paddingTop: 64
+    }
+});
+
 const scenes = Actions.create(
-  <Scene key="root">
-    <Scene key="onboardingText" component={OnboardingTextScene} />
-    <Scene key="onboardingQuiz" component={OnboardingQuizScene} />
-    <Scene key="rateWedge" component={RateWedgeScene} />
-    <Scene key="mandala" component={MandalaScene} title="Mandala" />
+<Scene key="root">
+  <Scene key="onboardingText" component={OnboardingTextScene} />
+  <Scene key="onboardingQuiz" component={OnboardingQuizScene} sceneStyle={style.padForNavBar} />
+  <Scene key="rateWedge" component={RateWedgeScene} />
+  <Scene key="mandala" component={MandalaScene} sceneStyle={style.padForNavBar} title="Mandala" />
 
-    {/* Mandala Detail Page */}
+  {/* Mandala Detail Page */}
 
-    <Scene key="tabbar" tabs={true}>
-      <Scene key="tab1" title="Tab 1" icon={TabIcon}>
-        <Scene key="recommendations" component={RecommendationsScene} title="Reccomendations" />
-      </Scene>
-      <Scene key="tab2" title="Tab 2" icon={TabIcon}>
-        <Scene key="graph" component={GraphScene} title="Graph" />
-      </Scene>
-      <Scene key="tab3" title="Tab 3" icon={TabIcon}>
-        <Scene key="editMetric" component={EditMetricScene} title="Edit Metric" />
-      </Scene>
+  <Scene key="tabbar" tabs={true}>
+    <Scene key="tab1" title="Tab 1" icon={TabIcon}>
+      <Scene key="recommendations" component={RecommendationsScene} sceneStyle={style.padForNavBar} title="Reccomendations" />
     </Scene>
-
-    {/* Test scene. Can refactor into loading screen later. */}
-    <Scene key="launch" component={LaunchScene} title="Launch" />
-
+    <Scene key="tab2" title="Tab 2" icon={TabIcon}>
+      <Scene key="graph" component={GraphScene} sceneStyle={style.padForNavBar} title="Graph" />
+    </Scene>
+    <Scene key="tab3" title="Tab 3" icon={TabIcon}>
+      <Scene key="editMetric" component={EditMetricScene} sceneStyle={style.padForNavBar} title="Edit Metric" />
+    </Scene>
   </Scene>
+
+  {/* Test scene. Can refactor into loading screen later. */}
+  <Scene key="launch" component={LaunchScene} sceneStyle={style.padForNavBar} title="Launch" />
+
+</Scene>
 );
 
 export default scenes
