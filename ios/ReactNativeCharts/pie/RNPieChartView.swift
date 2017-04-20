@@ -21,6 +21,11 @@ class RNPieChartView: RNChartViewBase {
     override init(frame: CoreGraphics.CGRect) {
 
         self._chart = PieChartView(frame: frame)
+      
+        // TODO: Hardcoding in chart description removal here. Set description does not seem to be 
+        // getting called in chart base, so this is a temporary fix.
+        self._chart.chartDescription?.text = "";
+      
         self._dataExtract = PieDataExtract()
 
         super.init(frame: frame)

@@ -15,14 +15,14 @@ export default class OnboardingTextScene extends Component {
         style={styles.wrapper}
         showsButtons={true}
         loop={false}>
-        
+
         <Image source = {require('../../images/OnboardBackground.jpg')} style = {styles.backgroundImage}>
             <View style = {styles.slide1}>
             <Text style={styles.text1}>Welcome, let's help you get started thinking about your wellbeing!</Text>
             <Text style={styles.textDisclaimer}>Disclaimer</Text>
             </View>
         </Image>
-        
+
         <Image source = {require('../../images/mandala/onboarding1.jpg')} style = {styles.image}>
         <View style={styles.slide2}>
           <Text style={styles.text2}>The Mandala works by having you evaluate different areas of your life. You will then receive recommendations and set your priorities.</Text>
@@ -59,7 +59,7 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#92BBD9',
+    backgroundColor: '#9DD6EB',
   },
   textDisclaimer: {
     color: '#fff',
@@ -76,21 +76,21 @@ var styles = StyleSheet.create({
     textAlign: 'center',
     position: 'absolute',
     top: 60,
-    
+
   },
   text2: {
     fontSize: 20,
     textAlign: 'center',
     position: 'absolute',
     top: 60,
-    
+
   },
   text3: {
     fontSize: 20,
     textAlign: 'center',
     position: 'absolute',
     top: 260,
-    
+
   },
   backgroundImage: {
     flex: 1,

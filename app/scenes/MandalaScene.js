@@ -8,16 +8,17 @@ import {
   Button
 } from 'react-native';
 import { PieChart } from 'react-native-charts-wrapper';
-import { Actions } from 'react-native-router-flux'
+import { Actions } from 'react-native-router-flux';
+import { COLORS } from '../constants/Colors'
 
 class MandalaScene extends React.Component {
 
   constructor() {
     super();
-
+    let gradient = COLORS["gradient"];
     this.state = {
       legend: {
-        enabled: true,
+        enabled: false,
         textSize: 8,
         form: 'CIRCLE',
         position: 'RIGHT_OF_CHART',
@@ -25,25 +26,23 @@ class MandalaScene extends React.Component {
       },
       data: {
         dataSets: [{
-          values: [{value: 40, label: 'Sandwiches'},
-            {value: 21, label: 'Salads'},
-            {value: 15, label: 'Soup'},
-            {value: 9, label: 'Beverages'},
-            {value: 15, label: 'Desserts'}],
+          values: [{value: 20, label: 'Sandwiches'},
+          {value: 20, label: 'Salads'},
+          {value: 20, label: 'Soup'},
+          {value: 20, label: 'Beverages'},
+          {value: 20, label: 'Desserts'}],
           label: 'Pie dataset',
           config: {
-            colors: [processColor('#C0FF8C'), processColor('#FFF78C'), processColor('#FFD08C'), processColor('#8CEAFF'), processColor('#FF8C9D')],
-
+            colors: [processColor(gradient["1"]), processColor(gradient["3"]), processColor(gradient["7"]), processColor(gradient["10"]), processColor(gradient["9"])],
             sliceSpace: 5,
             selectionShift: 13
           }
         }],
       },
       description: {
-        text: 'This is Pie chart description',
+        text: 'Test',
         textSize: 15,
         textColor: processColor('darkgray'),
-
       }
     };
   }
@@ -53,48 +52,35 @@ class MandalaScene extends React.Component {
     if (entry == null) {
       this.setState({...this.state, selectedEntry: null})
     } else {
-      this.setState({...this.state, selectedEntry: JSON.stringify(entry)})
+      this.setState({...this.state, selectedEntry: entry.label})
+      Actions.tabbar({wedge:entry.label})
     }
-    Actions.tabbar()
   }
 
   render() {
     return (
-
       <View style={{flex: 1}}>
-        <Button
-          onPress={Actions.tabbar}
-          title="Select wedge."
-          accessibilityLabel="Select wedge."
-        />
-
-        <View style={{height:80}}>
-          <Text> selected entry</Text>
-          <Text> {this.state.selectedEntry}</Text>
-        </View>
-
         <View style={styles.container}>
           <PieChart
             style={styles.chart}
             logEnabled={true}
-            chartBackgroundColor={processColor('pink')}
+            chartBackgroundColor={processColor('#9DD6EB')}
             description={this.state.description}
             data={this.state.data}
             legend={this.state.legend}
 
             drawSliceText={true}
-            usePercentValues={false}
-            centerText={'Pie center text!'}
+            usePercentValues={true}
+            centerText={'Welcome!'}
             centerTextRadiusPercent={100}
-            holeRadius={40}
+            holeRadius={20}
             holeColor={processColor('#f0f0f0')}
-            transparentCircleRadius={45}
+            transparentCircleRadius={25}
             transparentCircleColor={processColor('#f0f0f088')}
 
             entryLabelColor={processColor('black')}
-            entryLabelTextSize={8}
+            entryLabelTextSize={1}
 
-            maxAngle={350}
             onSelect={this.handleSelect.bind(this)}
           />
         </View>
