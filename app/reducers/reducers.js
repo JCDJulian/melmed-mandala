@@ -1,12 +1,17 @@
 import { combineReducers } from 'redux'
-import { } from '../actions/actions'
+import { SELECT_WEDGE } from '../actions/actions'
 
-function selectMandala(state = 'default', action) {
-  return state
+function selectedWedge(state = 'default', action) {
+  switch (action.type) {
+    case SELECT_WEDGE:
+      return action.wedge
+    default:
+      return state
+  }
 }
 
 const rootReducer = combineReducers({
-  selectMandala
+  selectedWedge
 })
 
 export default rootReducer
