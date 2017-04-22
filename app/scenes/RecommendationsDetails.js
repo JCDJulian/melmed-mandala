@@ -12,6 +12,7 @@ export default class RecommendationsDetails extends Component {
     return (
     <View >
      <Image source = {require('../../images/components/family.jpeg')} style = {styles.containerImage}/>
+     <View><Text style={styles.listItem}>{this.props.recommendation.name}</Text></View>
      <View><Text style={styles.listItem}>{this.props.recommendation.detail}</Text></View>
     </View>
     )
