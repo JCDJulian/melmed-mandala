@@ -8,7 +8,8 @@ export default class OnboardingTextScene extends Component {
   render() {
     const goToQuiz = () => Actions.onboardingQuiz({
       wedge: WEDGES[0],
-      title: WEDGES[0]
+      title: WEDGES[0],
+      hideNavBar: false
     })
     return (
       <Swiper
