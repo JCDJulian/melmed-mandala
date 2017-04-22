@@ -8,6 +8,7 @@ import OnboardingQuizScene from '../scenes/OnboardingQuizScene';
 import RateWedgeScene from '../scenes/RateWedgeScene';
 import MandalaScene from '../scenes/MandalaScene';
 import RecommendationsScene from '../scenes/RecommendationsScene';
+import RecommendationsDetails from '../scenes/RecommendationsDetails';
 import GraphScene from '../scenes/GraphScene';
 import EditMetricScene from '../scenes/EditMetricScene';
 
@@ -36,6 +37,7 @@ const scenes = Actions.create(
     <Scene key="tab1" title="Tab 1" icon={TabIcon}>
       <Scene key="recommendations" component={RecommendationsScene} sceneStyle={style.padForNavBar} title="Reccomendations" />
     </Scene>
+    <Scene key="recommendationsdetails" title="Recommendation Details" component={RecommendationsDetails} sceneStyle={style.padForNavBar}/> 
     <Scene key="tab2" title="Tab 2" icon={TabIcon}>
       <Scene key="graph" component={GraphScene} sceneStyle={style.padForNavBar} title="Graph" />
     </Scene>
