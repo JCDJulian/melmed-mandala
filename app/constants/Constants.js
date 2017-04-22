@@ -1,28 +1,177 @@
 export const WEDGES = ["Family Life",
-  "Relationships",
-  "Spirituality",
-  "Finances",
-  "Organization",
-  "Medical",
-  "Work",
-  "Social Skills",
-  "Exercise",
-  "Diet"
+"Relationships",
+"Spirituality",
+"Finances",
+"Organization",
+"Medical",
+"Work",
+"Social Skills",
+"Exercise",
+"Diet"
 ]
 
-export const FAMILY_RECS = [
-  {
-    id: 0,
-    name: "Talk to your parents",
-    detail: "Talking more to your parents can help",
-    image: '../../images/components/family.jpeg'
+export const WEDGE_QUESTIONS = {
+  "Family Life": {
+    name: "Family Life",
+    rating: 5,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your relationship with those close to you?",
+        rating: 5
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your schoolmates or coworkers?",
+        rating: 3
+      }
+    ]
   },
-  {
-    id: 1,
-    name: "Visit your brother",
-    detail: "Visitng siblings is always great"
+  "Relationships": {
+    name: "Relationships",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Relationships?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Spirituality": {
+    name: "Spirituality",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Spirituality?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Finances": {
+    name: "Finances",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Finances?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Organization": {
+    name: "Organization",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Organization?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Medical": {
+    name: "Medical",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Medical?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Work": {
+    name: "Work",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Work?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Social Skills": {
+    name: "Social Skills",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Social Skills?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Exercise": {
+    name: "Exercise",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Exercise?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
+  },
+  "Diet": {
+    name: "Diet",
+    rating: 9,
+    questions: [
+      {
+        id: 1,
+        text: "How would you rate your satisfication with your Diet?",
+        rating: 2
+      },
+      {
+        id: 2,
+        text: "How would you rate your relationship with your significant other?",
+        rating: 1
+      }
+    ]
   }
-]
+}
 
 export const WEDGE_DATA = {
   "Family Life": {

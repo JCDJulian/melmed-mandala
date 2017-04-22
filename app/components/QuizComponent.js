@@ -2,16 +2,23 @@ import React, { Component } from 'react'
 import { View, Text, Button, StyleSheet, ListView } from 'react-native'
 import QuizRowComponent from './QuizRowComponent.js'
 import QuizFooterComponent from './QuizFooterComponent.js'
+import { WEDGE_QUESTIONS } from '../constants/Constants.js'
 import { getNextPage } from '../constants/UtilityMethods.js'
 import { Actions } from 'react-native-router-flux'
 
 export default class QuizComponent extends Component {
   render() {
+
+    console.log(this.props)
+    console.log(WEDGE_QUESTIONS[this.props.wedge].questions)
+    const questions = WEDGE_QUESTIONS[this.props.wedge].questions
+    const questionsText = questions.map(function(object) {
+      return object.text
+    });
+
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
-      dataSource: ds.cloneWithRows([
-        'Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5', 'Question 6', 'Question 7', 'Question 8'
-      ])
+      dataSource: ds.cloneWithRows(questionsText)
     }
 
     return (
