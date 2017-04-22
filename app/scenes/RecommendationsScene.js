@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { View, Text, Image, ListView, StyleSheet, TouchableHighlight } from 'react-native'
 import { Actions } from 'react-native-router-flux'
 import { FAMILY_RECS } from '../constants/Constants.js'
+import store from '../store/store'
 
 export default class RecommendationsScene extends Component {
    render() {
@@ -9,13 +10,15 @@ export default class RecommendationsScene extends Component {
     this.state = {
       dataSource: ds.cloneWithRows(FAMILY_RECS)
     }
+
+    console.log(store.getState())
     return (
     <View >
       <ListView
         dataSource={this.state.dataSource}
         renderHeader={(rowData) => <Image source = {require('../../images/components/family.jpeg')} style = {styles.containerImage}/>}
-        renderRow={(rowData) => 
-          <TouchableHighlight 
+        renderRow={(rowData) =>
+          <TouchableHighlight
             onPress={
               ()=>Actions.recommendationsdetails(
                 {recommendation: rowData}

@@ -29,7 +29,7 @@ const scenes = Actions.create(
   <Scene key="onboardingText" component={OnboardingTextScene} />
   <Scene key="onboardingQuiz" component={OnboardingQuizScene} sceneStyle={style.padForNavBar} />
   <Scene key="rateWedge" component={RateWedgeScene} />
-  <Scene key="mandala" component={MandalaScene} sceneStyle={style.padForNavBar} title="Mandala" />
+  <Scene key="mandala" initial component={MandalaScene} sceneStyle={style.padForNavBar} title="Mandala" />
 
   {/* Mandala Detail Page */}
 
@@ -37,12 +37,12 @@ const scenes = Actions.create(
     <Scene key="tab1" title="Tab 1" icon={TabIcon}>
       <Scene key="recommendations" component={RecommendationsScene} sceneStyle={style.padForNavBar} title="Reccomendations" />
     </Scene>
-    <Scene key="recommendationsdetails" title="Recommendation Details" component={RecommendationsDetails} sceneStyle={style.padForNavBar}/> 
+    <Scene key="recommendationsdetails" title="Recommendation Details" component={RecommendationsDetails} sceneStyle={style.padForNavBar}/>
     <Scene key="tab2" title="Tab 2" icon={TabIcon}>
       <Scene key="graph" component={GraphScene} sceneStyle={style.padForNavBar} title="Graph" />
     </Scene>
     <Scene key="tab3" title="Tab 3" icon={TabIcon}>
-      <Scene key="editMetric" component={EditMetricScene} sceneStyle={style.padForNavBar} title="Edit Metric" />
+      <Scene key="editMetric" component={EditMetricScene} sceneStyle={style.padForNavBar} />
     </Scene>
   </Scene>
 
