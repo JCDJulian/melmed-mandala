@@ -7,12 +7,6 @@ import { getNextPage } from '../constants/UtilityMethods.js'
 
 export default class OnboardingQuizScene extends Component {
   render() {
-    const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
-    this.state = {
-      dataSource: ds.cloneWithRows([
-        'Question 1', 'Question 2', 'Question 3', 'Question 4', 'Question 5', 'Question 6', 'Question 7', 'Question 8'
-      ])
-    }
 
     return (
         <QuizComponent {...this.props} showFooter={true} />

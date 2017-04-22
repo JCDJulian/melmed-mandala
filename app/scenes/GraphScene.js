@@ -16,7 +16,23 @@ class GraphScene extends React.Component {
 
     this.state = {
       data: {},
-      
+      legend: {
+        enabled: false,
+        textColor: processColor('#9DD6EB'),
+        textSize: 12,
+        position: 'BELOW_CHART_RIGHT',
+        form: 'SQUARE',
+        formSize: 14,
+        xEntrySpace: 10,
+        yEntrySpace: 5,
+        formToTextSpace: 5,
+        wordWrapEnabled: true,
+        maxSizePercent: 0.5,
+        custom: {
+          colors: [processColor('red'), processColor('blue'), processColor('green')],
+          labels: ['Family Life', 'Relationships', 'Spirituality', 'Finances', 'Organization', 'Medical', 'Work', 'Social Skills', 'Exercise', 'Diet']
+        }
+      },
       marker: {
         enabled: true,
         backgroundTint: processColor('teal'),

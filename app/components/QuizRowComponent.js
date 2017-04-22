@@ -61,7 +61,8 @@ const styles = StyleSheet.create({
   },
   label: {
     padding: 20,
-    fontSize: 20
+    fontSize: 20,
+    textAlign:'center'
   },
   col: {
     flex: 1,

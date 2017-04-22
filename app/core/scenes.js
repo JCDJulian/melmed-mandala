@@ -26,10 +26,10 @@ const style = StyleSheet.create({
 
 const scenes = Actions.create(
 <Scene key="root">
-  <Scene key="onboardingText" component={OnboardingTextScene} />
+  <Scene key="onboardingText" initial component={OnboardingTextScene} hideNavBar />
   <Scene key="onboardingQuiz" component={OnboardingQuizScene} sceneStyle={style.padForNavBar} />
   <Scene key="rateWedge" component={RateWedgeScene} />
-  <Scene key="mandala" initial component={MandalaScene} sceneStyle={style.padForNavBar} title="Mandala" />
+  <Scene key="mandala" component={MandalaScene} sceneStyle={style.padForNavBar} title="Mandala" />
 
   {/* Mandala Detail Page */}
 
