@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import { View, Text, Button, StyleSheet, ListView } from 'react-native'
-import QuizRowComponent from '../components/QuizRowComponent.js'
-import QuizComponent from '../components/QuizComponent.js'
-import QuizFooterComponent from '../components/QuizFooterComponent.js'
+import QuizRowComponent from './QuizRowComponent.js'
+import RateWedgeInputComponent from './RateWedgeInputComponent.js'
+import QuizComponent from './QuizComponent.js'
 import { getNextPage } from '../constants/UtilityMethods.js'
+import { Actions } from 'react-native-router-flux'
 
-export default class OnboardingQuizScene extends Component {
+export default class EditMetricComponent extends Component {
+
   render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
@@ -15,7 +17,10 @@ export default class OnboardingQuizScene extends Component {
     }
 
     return (
-        <QuizComponent {...this.props} showFooter={true} />
+      <View style={styles.container}>
+        <RateWedgeInputComponent onSubmit={()=>console.log("Hello world")}/>
+        <QuizComponent {...this.props} showFooter={false} />
+      </View>
     )
   }
 }
@@ -23,7 +28,7 @@ export default class OnboardingQuizScene extends Component {
 var styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#9DD6EB',
+    marginBottom:50
   },
   separator: {
    flex:1,

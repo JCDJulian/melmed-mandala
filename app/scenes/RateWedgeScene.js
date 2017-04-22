@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native'
 import { getNextPage } from '../constants/UtilityMethods.js'
+import RateWedgeInputComponent from '../components/RateWedgeInputComponent.js'
 
 export default class RateWedgeScene extends Component {
 
@@ -41,26 +42,7 @@ export default class RateWedgeScene extends Component {
 
     return (
       <View style={styles.container}>
-        <Text
-          style = {styles.header}
-          >Rating {this.props.wedge}
-        </Text>
-        <Text style = {styles.instructionText}>
-          Please provide a rating between 1 and 10 for this wedge.
-        </Text>
-        <TextInput
-          style = {styles.textInput}
-          editable = {true}
-          maxLength = {2}
-          onChangeText={(text) => this.onChanged(text)}
-          keyboardType={'number-pad'}
-          value={this.state.text}
-        />
-        <Button
-          onPress={nextPage}
-          title="Submit Assessment"
-          accessibilityLabel="Submit assessment and move to mandala."
-        />
+        <RateWedgeInputComponent {...this.props} onSubmit={nextPage}/>
       </View>
     )
   }
@@ -72,22 +54,5 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#9DD6EB',
-  },
-  header: {
-    fontSize: 30,
-    padding: 5
-  },
-  instructionText: {
-    fontSize: 12
-  },
-  textInput: {
-    backgroundColor: '#ededed',
-    height: 60,
-    marginTop: 20,
-    marginBottom: 20,
-    marginLeft: 140,
-    marginRight: 140,
-    fontSize: 20,
-    textAlign: "center"
   }
 });

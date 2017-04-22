@@ -16,7 +16,8 @@ export function getNextPage(wedge, isTitleDiplayed) {
 
     return () => Actions.onboardingQuiz({
       wedge: nextWedge,
-      title: newTitle
+      title: newTitle,
+      showFooter: true
     })
   }
 }
