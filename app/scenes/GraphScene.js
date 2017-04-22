@@ -16,23 +16,7 @@ class GraphScene extends React.Component {
 
     this.state = {
       data: {},
-      legend: {
-        enabled: false,
-        textColor: processColor('#9DD6EB'),
-        textSize: 12,
-        position: 'BELOW_CHART_RIGHT',
-        form: 'SQUARE',
-        formSize: 14,
-        xEntrySpace: 10,
-        yEntrySpace: 5,
-        formToTextSpace: 5,
-        wordWrapEnabled: true,
-        maxSizePercent: 0.5,
-        custom: {
-          colors: [processColor('red'), processColor('blue'), processColor('green')],
-          labels: ['Family Life', 'Relationships', 'Spirituality', 'Finances', 'Organization', 'Medical', 'Work', 'Social Skills', 'Exercise', 'Diet']
-        }
-      },
+      
       marker: {
         enabled: true,
         backgroundTint: processColor('teal'),
@@ -49,7 +33,7 @@ class GraphScene extends React.Component {
         data: {
           $set: {
             dataSets: [{
-              values: [{y: 1}, {y: 2}, {y: 3}, {y: 4}, {y: 5}, {y: 6}, {y: 7}, {y: 8}, {y: 9}, {y: 10}],
+              values: [{y: 1}, {y: 2}, {y: 3}, {y: 4}],
               label: 'Family Life',
               config: {
                 lineWidth: 1,
@@ -67,7 +51,7 @@ class GraphScene extends React.Component {
         },
         xAxis: {
           $set: {
-            valueFormatter: ['Week1', 'Week2', 'Week3', 'Week4']
+            valueFormatter: ['Week1', 'Week2', 'Week3', 'Week4', ]
           }
         }
       })
@@ -87,10 +71,7 @@ class GraphScene extends React.Component {
     return (
       <View style={{flex: 1}}>
 
-        <View style={{height:100}}>
-          <Text>Family Life</Text>
-          <Text> {this.state.selectedEntry}</Text>
-        </View>
+       
 
         <View style={styles.container}>
           <LineChart
