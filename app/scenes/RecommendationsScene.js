@@ -1,19 +1,19 @@
 import React, { Component } from 'react'
 import { View, Text, Image, ListView, StyleSheet, TouchableHighlight } from 'react-native'
 import { Actions } from 'react-native-router-flux'
-import { FAMILY_RECS } from '../constants/Constants.js'
+import { WEDGE_DATA } from '../constants/Constants.js'
 import store from '../store/store'
 
 export default class RecommendationsScene extends Component {
    render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
     this.state = {
-      dataSource: ds.cloneWithRows(FAMILY_RECS)
+      dataSource: ds.cloneWithRows(WEDGE_DATA["Family Life"]["recs"])
     }
 
     console.log(store.getState())
     return (
-    <View >
+    <View style={styles.wrapper}>
       <ListView
         dataSource={this.state.dataSource}
         renderHeader={(rowData) => <Image source = {require('../../images/components/family.jpeg')} style = {styles.containerImage}/>}
@@ -34,6 +34,7 @@ export default class RecommendationsScene extends Component {
 
 var styles = StyleSheet.create({
   wrapper: {
+    flex:1
   },
   listContainer: {
     flex: 1,

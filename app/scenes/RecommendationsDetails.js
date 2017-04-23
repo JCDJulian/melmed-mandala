@@ -6,12 +6,10 @@ import { FAMILY_RECS } from '../constants/Constants.js'
 export default class RecommendationsDetails extends Component {
    render() {
     const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2})
-    this.state = {
-      dataSource: ds.cloneWithRows(FAMILY_RECS)
-    }
+   
     return (
     <View >
-     <Image source = {require('../../images/components/family.jpeg')} style = {styles.containerImage}/>
+     <Image source = {require('../../images/components/parents.jpeg')} style = {styles.containerImage}/>
      <View><Text style={styles.listItem}>{this.props.recommendation.name}</Text></View>
      <View><Text style={styles.listItem}>{this.props.recommendation.detail}</Text></View>
     </View>

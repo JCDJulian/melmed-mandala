@@ -181,12 +181,19 @@ export const WEDGE_DATA = {
         id: 0,
         name: "Talk to your parents",
         detail: "Talking more to your parents can help",
-
+        recImage: "../../images/components/family.jpeg"
       },
       {
         id: 1,
         name: "Visit your brother",
-        detail: "Visitng siblings is always great"
+        detail: "Visitng siblings is always great",
+        recImage: "../../images/components/family.jpeg"
+      },
+      {
+        id: 2,
+        name: "Bake some cake",
+        detail: "Families love cakes",
+        recImage: "../../images/components/family.jpeg"
       }
     ]
   },
