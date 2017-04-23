@@ -29,15 +29,19 @@ export default class OnboardingTextScene extends Component {
           <Text style={styles.text2}>The Mandala works by having you evaluate different areas of your life. You will then receive recommendations and set your priorities.</Text>
         </View>
         </Image>
+        <Image source = {require('../../images/mandala/mandala2.jpg')} style = {styles.image}>
         <View style={styles.slide3}>
-          <Text style={styles.text3}>Let's start by answering some questions about you.</Text>
+          <Text style={styles.text2}>Let's start by answering some questions about you.</Text>
           <Button
             onPress={ goToQuiz }
             title="Get Started"
             accessibilityLabel="Get started with onboarding assessment."
-            color="#841584"
+            color={'#fff'}
+            style={styles.buttonContainer}
+            backgroundColor={"#BAD4AA"}
           />
         </View>
+        </Image>
       </Swiper>
     )
   }
@@ -60,7 +64,6 @@ var styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB',
   },
   textDisclaimer: {
     color: '#fff',
@@ -105,5 +108,16 @@ var styles = StyleSheet.create({
     resizeMode: 'contain',
     width: null,
     height: null,
-  }
+  },
+  buttonContainer: {
+    position:'absolute',
+    backgroundColor:"#BAD4AA",
+    top: 400,
+    paddingVertical: 10,
+    borderRadius: 10,
+    borderWidth: 1,
+    color: "#fff",
+    textAlign: 'center'
+  },
+ 
 })
