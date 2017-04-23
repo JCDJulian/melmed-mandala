@@ -28,14 +28,33 @@ class MandalaComponent extends React.Component {
       },
       data: {
         dataSets: [{
-          values: [{value: 20, label: 'Sandwiches'},
-          {value: 20, label: 'Salads'},
-          {value: 20, label: 'Soup'},
-          {value: 20, label: 'Beverages'},
-          {value: 20, label: 'Desserts'}],
-          label: 'Pie dataset',
+          values: [{value: 20, label: 'Family Life'},
+          {value: 20, label: 'Relationships'},
+          {value: 20, label: 'Spirituality'},
+          {value: 20, label: 'Finances'},
+          {value: 20, label: 'Organization'},
+          {value: 20, label: 'Medical'},
+          {value: 20, label: 'Work'},
+          {value: 20, label: 'Social Skills'},
+          {value: 20, label: 'Exercise'},
+          {value: 20, label: 'Diet'},
+        ],
+          label: 'Mandala',
           config: {
-            colors: [processColor(gradient["1"]), processColor(gradient["3"]), processColor(gradient["7"]), processColor(gradient["10"]), processColor(gradient["9"])],
+            drawValues: false,
+            colors:
+            [
+              processColor(gradient["1"]),
+              processColor(gradient["3"]),
+              processColor(gradient["7"]),
+              processColor(gradient["10"]),
+              processColor(gradient["9"]),
+              processColor(gradient["1"]),
+              processColor(gradient["9"]),
+              processColor(gradient["10"]),
+              processColor(gradient["6"]),
+              processColor(gradient["8"])
+            ],
             sliceSpace: 5,
             selectionShift: 13
           }
@@ -73,11 +92,9 @@ class MandalaComponent extends React.Component {
 
             drawSliceText={true}
             usePercentValues={true}
-            centerText={'Welcome!'}
-            centerTextRadiusPercent={100}
-            holeRadius={20}
+            holeRadius={5}
             holeColor={processColor('#f0f0f0')}
-            transparentCircleRadius={25}
+            transparentCircleRadius={20}
             transparentCircleColor={processColor('#f0f0f088')}
 
             entryLabelColor={processColor('black')}
