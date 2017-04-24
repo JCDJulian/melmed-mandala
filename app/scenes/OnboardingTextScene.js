@@ -20,18 +20,18 @@ export default class OnboardingTextScene extends Component {
         <Image source = {require('../../images/OnboardBackground.jpg')} style = {styles.backgroundImage}>
             <View style = {styles.slide1}>
             <Text style={styles.text1}>Welcome, let's help you get started thinking about your wellbeing!</Text>
-            <Text style={styles.textDisclaimer}>Disclaimer</Text>
+            <Text style={styles.textDisclaimer}>Disclaimer: This application does NOT provide medical advice or replace care provided by a clinician. If you are experiencing a medical or psychiatric emergency, contact 911 immediately.</Text>
             </View>
         </Image>
 
         <Image source = {require('../../images/mandala/onboarding1.jpg')} style = {styles.image}>
         <View style={styles.slide2}>
-          <Text style={styles.text2}>The Mandala works by having you evaluate different areas of your life. You will then receive recommendations and set your priorities.</Text>
+          <Text style={styles.text2}>The Mandala works by having you rate your satisfaction with different areas of your life. You can then set your priorities and receive recommendations.</Text>
         </View>
         </Image>
         <Image source = {require('../../images/mandala/mandala2.jpg')} style = {styles.image}>
         <View style={styles.slide3}>
-          <Text style={styles.text2}>Let's start by answering some questions about you.</Text>
+          <Text style={styles.text2}>Let's start by answering some questions to get you thinking about your wellbeing. You can then rate yourself across ten areas of your life.</Text>
           <Button
             onPress={ goToQuiz }
             title="Get Started"
@@ -67,7 +67,7 @@ var styles = StyleSheet.create({
   },
   textDisclaimer: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 12,
     fontWeight: 'bold',
     textAlign: 'center',
     position: 'absolute',
