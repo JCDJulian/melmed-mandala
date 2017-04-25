@@ -19,7 +19,7 @@ export default class OnboardingTextScene extends Component {
 
         <Image source = {require('../../images/OnboardBackground.jpg')} style = {styles.backgroundImage}>
             <View style = {styles.slide1}>
-            <Text style={styles.text1}>Welcome, let's help you get started thinking about your wellbeing!</Text>
+            <Text style={styles.text1}>Welcome, let's help you get started thinking about your well-being!</Text>
             <Text style={styles.textDisclaimer}>Disclaimer: This application does NOT provide medical advice or replace care provided by a clinician. If you are experiencing a medical or psychiatric emergency, contact 911 immediately.</Text>
             </View>
         </Image>
