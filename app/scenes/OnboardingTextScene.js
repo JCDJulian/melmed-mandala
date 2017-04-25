@@ -32,14 +32,15 @@ export default class OnboardingTextScene extends Component {
         <Image source = {require('../../images/mandala/mandala2.jpg')} style = {styles.image}>
         <View style={styles.slide3}>
           <Text style={styles.text2}>Let's start by answering some questions to get you thinking about your wellbeing. You can then rate yourself across ten areas of your life.</Text>
-          <Button
-            onPress={ goToQuiz }
-            title="Get Started"
-            accessibilityLabel="Get started with onboarding assessment."
-            color={'#fff'}
-            style={styles.buttonContainer}
-            backgroundColor={"#BAD4AA"}
-          />
+          <View style={styles.buttonContainer}>
+            <Button
+              onPress={ goToQuiz }
+              title="Get Started"
+              accessibilityLabel="Get started with onboarding assessment."
+              color={'blue'}
+              backgroundColor={"#BAD4AA"}
+            />
+          </View>
         </View>
         </Image>
       </Swiper>
@@ -71,7 +72,8 @@ var styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     position: 'absolute',
-    top: 580,
+    top: 540,
+    width: 300
   },
   text1: {
     color: '#fff',
@@ -110,14 +112,7 @@ var styles = StyleSheet.create({
     height: null,
   },
   buttonContainer: {
-    position:'absolute',
-    backgroundColor:"#BAD4AA",
-    top: 400,
-    paddingVertical: 10,
-    borderRadius: 10,
-    borderWidth: 1,
-    color: "#fff",
-    textAlign: 'center'
+    top: 200
   },
- 
+
 })
