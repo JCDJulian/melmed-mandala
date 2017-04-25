@@ -4,7 +4,11 @@ import { SELECT_WEDGE } from '../actions/actions'
 function selectedWedge(state = 'default', action) {
   switch (action.type) {
     case SELECT_WEDGE:
-      return action.wedge
+      if (action.wedge !== undefined) {
+        return action.wedge
+      } else {
+        return state
+      }
     default:
       return state
   }

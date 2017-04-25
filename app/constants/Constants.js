@@ -33,7 +33,7 @@ export const WEDGE_QUESTIONS = {
     questions: [
       {
         id: 1,
-        text: "I wish I had more support from people I care about",
+        text: "I wish I had more support from people I care about.",
         rating: 2
       },
       {
